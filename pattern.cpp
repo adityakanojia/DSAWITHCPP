@@ -41,10 +41,25 @@ void alphabetSquare (int number) {
         cout << endl;
     }
 }
+
+void squareNumber (int number){
+    int num = 1;
+    for(int i=1;i<=number;i++){
+        for (int j = 1; j <= number; j++)
+        {
+            cout << num;
+            num = num + 1;
+        }
+        cout << endl;
+    }
+}
+
+
 int main() {
     // numberPattern(4);
     // triangleSquarePattern(5);
     // pyrammidTriangle(5);
-    alphabetSquare(5);
+    // alphabetSquare(5);
+    squareNumber(3);
     return 0;
 }
