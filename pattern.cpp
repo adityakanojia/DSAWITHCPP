@@ -30,12 +30,12 @@ void pyrammidTriangle (int number){
 }
 
 void alphabetSquare (int number) {
-    for(int i = 1;i<=number;i++){
-        char ch = 'A';
-        for (int j = 1; j <= number; j++)
-        {
-            cout << ch;
-            ch = ch + 1;
+    char character = 'A';
+    for(int i = 1; i<= number;i++){
+        for(int j = 1; j <= number; j++)
+        {   
+            cout << character << " ";
+            character += 1;
         }
         
         cout << endl;
@@ -44,22 +44,38 @@ void alphabetSquare (int number) {
 
 void squareNumber (int number){
     int num = 1;
-    for(int i=1;i<=number;i++){
-        for (int j = 1; j <= number; j++)
+    for (int i = 1; i <= number; i++)
+    {
+        for (int j = 0; j <= number; j++)
         {
-            cout << num;
-            num = num + 1;
+            cout << num << " ";
+            num += 1;
         }
+        
         cout << endl;
     }
+    
 }
 
+void numberPyrramidPattern (int number) {
+    for (int i = 0; i < number; i++)
+    {
+        for (int j = 0; j < i+1; j++)  // when i = 0 if  j < 0 + 1 = 1 
+        {
+            cout << i + 1 << " "; // console 0 + 1 = 1  
+        }
+        
+        cout << endl ;
+    }
+    
+}
 
 int main() {
     // numberPattern(4);
     // triangleSquarePattern(5);
     // pyrammidTriangle(5);
-    // alphabetSquare(5);
-    squareNumber(3);
+    // alphabetSquare(6);
+    // squareNumber(3);
+    numberPyrramidPattern(4);
     return 0;
 }
