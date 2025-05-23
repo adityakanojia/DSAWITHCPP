@@ -30,9 +30,11 @@ then we will define our inner loop which will perform task/ logic which we need 
 
 pseudo code :- 
 
-num = 1;
+int num = 1;
 
-for (i = 0; i < number; i++ ){
+for (i = 0; i < number; i++ )
+
+{
 
     for (j = 0; j < number; j++){
         
