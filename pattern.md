@@ -33,9 +33,15 @@ pseudo code :-
 num = 1;
 
 for (i = 0; i < number; i++ ){
+
     for (j = 0; j < number; j++){
-        cout << num;
+        
+        cout << num;    
+        
         num++;
+    
     }
+        
     cout << endl;
+
 };
