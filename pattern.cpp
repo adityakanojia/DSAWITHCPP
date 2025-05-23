@@ -70,12 +70,42 @@ void numberPyrramidPattern (int number) {
     
 }
 
+void alphabetPyrramidPattern (int number){
+    char alp = 'A';
+    for (int i = 0; i < number; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+         cout << alp << " ";   
+        }
+        alp++;
+        cout << endl;
+    }
+    
+}
+
+void pyrrmaidPatternTwo (int number){
+    for (int i = 0; i < number; i++)
+    {
+        int num = 1;
+        for (int j = 0; j < i + 1; j++)
+        {
+         cout << num << " ";
+         num++;
+        }
+        cout << endl;
+    }
+    
+}
+
 int main() {
     // numberPattern(4);
     // triangleSquarePattern(5);
     // pyrammidTriangle(5);
     // alphabetSquare(6);
     // squareNumber(3);
-    numberPyrramidPattern(4);
+    // numberPyrramidPattern(4);
+    // alphabetPyrramidPattern(4);
+    pyrrmaidPatternTwo(3);
     return 0;
 }
