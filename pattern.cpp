@@ -125,6 +125,22 @@ void pyrammidPatternReverseNumber (int count) { // Backward loop problem
     };
 }
 
+void BackwardPatternRepeatedNumbers (int count) {
+    for (int i = 0; i <= count; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << " ";
+        }
+        
+        for (int k = 0; k < count - i; k++)
+        {
+            cout << i+1;
+        }       
+        cout << endl;
+    }
+}
+
 int main() {
     // countPattern(4);
     // triangleSquarePattern(5);
@@ -135,6 +151,7 @@ int main() {
     // alphabetPyrramidPattern(4);
     // pyrrmaidPatternTwo(3);
     // pyrammidContinuationNumber(4);
-    pyrammidPatternReverseNumber(4);
+    // pyrammidPatternReverseNumber(4);
+    BackwardPatternRepeatedNumbers(4);
     return 0;
 }
