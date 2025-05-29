@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-void numberPattern (int number) { // outer loop will run till number
-    for(int i = 1; i <= number; i++){
-        for (int j = 1; j <= number; j++)  // inner loop will go through each number till the number 
+void countPattern (int count) { // outer loop will run till count
+    for(int i = 1; i <= count; i++){
+        for (int j = 1; j <= count; j++)  // inner loop will go through each count till the count 
         {
             cout << j;
         };        
@@ -11,17 +11,17 @@ void numberPattern (int number) { // outer loop will run till number
     }
 }
 
-void triangleSquarePattern (int number){
-    for(int i = 1; i<=number; i++){
-        for(int j=1; j<=number; j++){
+void triangleSquarePattern (int count){
+    for(int i = 1; i<=count; i++){
+        for(int j=1; j<=count; j++){
             cout << "*";
         }
         cout << endl;
     }  
 }
 
-void pyrammidTriangle (int number){
-    for(int i = 1; i <= number;i++){ // number of lines pattern will be formed
+void pyrammidTriangle (int count){
+    for(int i = 1; i <= count;i++){ // count of lines pattern will be formed
         for(int j=1;j<=i;j++){ // will run untill i 
             cout << "*";  // print * for example when i = 1 innerloop will print * and when i = 2 innerloop wi;; run twice and print ** 
         }
@@ -29,10 +29,10 @@ void pyrammidTriangle (int number){
     }
 }
 
-void alphabetSquare (int number) {
+void alphabetSquare (int count) {
     char character = 'A';
-    for(int i = 1; i<= number;i++){
-        for(int j = 1; j <= number; j++)
+    for(int i = 1; i<= count;i++){
+        for(int j = 1; j <= count; j++)
         {   
             cout << character << " ";
             character += 1;
@@ -42,11 +42,11 @@ void alphabetSquare (int number) {
     }
 }
 
-void squareNumber (int number){
+void squarecount (int count){
     int num = 1;
-    for (int i = 1; i <= number; i++)
+    for (int i = 1; i <= count; i++)
     {
-        for (int j = 0; j <= number; j++)
+        for (int j = 0; j <= count; j++)
         {
             cout << num << " ";
             num += 1;
@@ -57,8 +57,8 @@ void squareNumber (int number){
     
 }
 
-void numberPyrramidPattern (int number) {
-    for (int i = 0; i < number; i++)
+void countPyrramidPattern (int count) {
+    for (int i = 0; i < count; i++)
     {
         for (int j = 0; j < i+1; j++)  // when i = 0 if  j < 0 + 1 = 1 
         {
@@ -70,9 +70,9 @@ void numberPyrramidPattern (int number) {
     
 }
 
-void alphabetPyrramidPattern (int number){
+void alphabetPyrramidPattern (int count){
     char alp = 'A';
-    for (int i = 0; i < number; i++)
+    for (int i = 0; i < count; i++)
     {
         for (int j = 0; j < i + 1; j++)
         {
@@ -84,8 +84,8 @@ void alphabetPyrramidPattern (int number){
     
 }
 
-void pyrrmaidPatternTwo (int number){
-    for (int i = 0; i < number; i++)
+void pyrrmaidPatternTwo (int count){
+    for (int i = 0; i < count; i++)
     {
         int num = 1;
         for (int j = 0; j < i + 1; j++)
@@ -98,14 +98,43 @@ void pyrrmaidPatternTwo (int number){
     
 }
 
+void pyrammidContinuationNumber (int count) {
+ int num = 1;
+ for (int i = 0; i < count; i++)
+ {
+    for (int j = 0; j < i+1; j++)
+    {
+        cout << num << " ";
+        num++;
+    }
+    
+    cout << endl;
+ }
+ 
+}
+
+void pyrammidPatternReverseNumber (int count) { // Backward loop problem
+    
+    for (int i = 0; i < count; i++)
+    {
+        for (int j = i+1; j > 0; j--)
+        {
+            cout << j << " ";
+        };
+        cout << endl;
+    };
+}
+
 int main() {
-    // numberPattern(4);
+    // countPattern(4);
     // triangleSquarePattern(5);
     // pyrammidTriangle(5);
     // alphabetSquare(6);
-    // squareNumber(3);
-    // numberPyrramidPattern(4);
+    // squarecount(3);
+    // countPyrramidPattern(4);
     // alphabetPyrramidPattern(4);
-    pyrrmaidPatternTwo(3);
+    // pyrrmaidPatternTwo(3);
+    // pyrammidContinuationNumber(4);
+    pyrammidPatternReverseNumber(4);
     return 0;
 }

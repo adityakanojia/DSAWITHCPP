@@ -18,11 +18,11 @@ this is called square pattern where outer loop will run till N times and inner l
 
 example :- 
 
-# A B C 
+## A B C 
 
-# D E F
+## D E F
 
-# G H I
+## G H I
 
 in this pattern we define a variable before starting of our outer loop after that we define our outer loop where it loop through till N times and console endline at the end just so our loop go through 
 
@@ -47,3 +47,30 @@ for (i = 0; i < number; i++ )
     cout << endl;
 
 };
+
+
+# Backward looping 
+
+## Example
+
+## 1
+
+## 2 1
+
+## 3 2 1
+
+## 4 3 2 1
+
+As we can see from the above example outer loop will run **4 times** as there are 4 line and inner loop will run till puter loop for example if we have **outer loop index = 1 then inner loop will run once when outer loop index is 3 inner loop will run thrice**.
+lets take a look at pseudo code.
+
+`for(int i=0 ; i < N ; i++){`
+    `for(int j= i+1; j > 0; j--)`
+    {
+        cout << j << " ";
+    }
+
+    cout << endl;
+`}`
+
+**As above code explains the moment when i turn 1 inner loop will console 1 then j = 1-1 loop will break then i will turn 2 then loop will run twice ie :- j = 2 ==> console 2 ==> j = 2 - 1 == 1 which is greater then 0 ==> console 1 ==> j = 1 - 1 == 0 which is not greater than 0 ==> inner loop will break the i = i + 1 and it continues .**
