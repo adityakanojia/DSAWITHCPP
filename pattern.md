@@ -1,81 +1,106 @@
 # Pattern Programming
 
-## Rendering N numbers till N times
+## 1. Square Pattern: Rendering N Numbers N Times
 
-eg :- printing
+**Example (N = 4):**
 
+```
 1234
-
 1234
-
 1234
-
 1234
+```
 
-this is called square pattern where outer loop will run till N times and inner loop runs through N times then we will create endl in the outer loop when inner loop will end.
+**Explanation:**
 
-## Rendering Square but in increasing order
+* The **outer loop** runs N times (one for each row).
+* The **inner loop** also runs N times, printing numbers (or characters) in each row.
+* After the inner loop finishes, print a newline (`endl`) to move to the next row.
 
-example :- 
+### Pseudocode
 
-## A B C 
+```cpp
+for (int i = 0; i < N; i++) {
+    for (int j = 1; j <= N; j++) {
+        cout << j;
+    }
+    cout << endl;
+}
+```
 
-## D E F
+---
 
-## G H I
+## 2. Square Pattern in Increasing Order
 
-in this pattern we define a variable before starting of our outer loop after that we define our outer loop where it loop through till N times and console endline at the end just so our loop go through 
+**Example (N = 3):**
 
-then we will define our inner loop which will perform task/ logic which we need to render our line where we just print that variable and at the ende we just increase it by 1 PS : same goes for character patterns
+```
+A B C
+D E F
+G H I
+```
 
-pseudo code :- 
+**Explanation:**
 
+* Initialize a variable before the loops, e.g. `char ch = 'A';` (or `int num = 1;` for numbers).
+* The **outer loop** runs N times (for each row).
+* The **inner loop** prints the current value of the variable, then increments it.
+* After each row, print a newline.
+
+### Pseudocode (Characters)
+
+```cpp
+char ch = 'A';
+
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        cout << ch << " ";
+        ch++;
+    }
+    cout << endl;
+}
+```
+
+### Pseudocode (Numbers)
+
+```cpp
 int num = 1;
 
-for (i = 0; i < number; i++ )
-
-{
-
-    for (j = 0; j < number; j++){
-        
-        cout << num;    
-        
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        cout << num << " ";
         num++;
-    
     }
-        
     cout << endl;
+}
+```
 
-};
+---
 
+## 3. Backward Looping Pattern
 
-# Backward looping 
+**Example (N = 4):**
 
-## Example
+```
+1
+2 1
+3 2 1
+4 3 2 1
+```
 
-## 1
+**Explanation:**
 
-## 2 1
+* The **outer loop** runs from 1 up to N (one iteration per line).
+* For each `i`, the **inner loop** starts at `i` and decrements down to 1, printing each value.
+* After the inner loop, print a newline.
 
-## 3 2 1
+### Pseudocode
 
-## 4 3 2 1
-
-As we can see from the above example outer loop will run **4 times** as there are 4 line and inner loop will run till puter loop for example if we have **outer loop index = 1 then inner loop will run once when outer loop index is 3 inner loop will run thrice**.
-lets take a look at pseudo code.
-
-` for(int i=0 ; i < N ; i++){
-
-    for(int j= i+1; j > 0; j--)
-    
-    {
-    
+```cpp
+for (int i = 1; i <= N; i++) {
+    for (int j = i; j > 0; j--) {
         cout << j << " ";
-    
     }
-
     cout << endl;
-
- } `
-
-**As above code explains the moment when i turn 1 inner loop will console 1 then j = 1-1 loop will break then i will turn 2 then loop will run twice ie :- j = 2 ==> console 2 ==> j = 2 - 1 == 1 which is greater then 0 ==> console 1 ==> j = 1 - 1 == 0 which is not greater than 0 ==> inner loop will break the i = i + 1 and it continues .**
+}
+```
