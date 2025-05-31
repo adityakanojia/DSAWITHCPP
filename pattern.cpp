@@ -128,7 +128,7 @@ void pyrammidPatternReverseNumber (int count) { // Backward loop problem
 void BackwardPatternRepeatedNumbers (int count) {
     for (int i = 0; i <= count; i++)
     {
-        for (int j = 0; j < i + 1; j++)
+        for (int j = 0; j < i ; j++)
         {
             cout << " ";
         }

@@ -104,3 +104,18 @@ for (int i = 1; i <= N; i++) {
     cout << endl;
 }
 ```
+# Example 
+
+```
+1111
+ 222
+  33
+   4
+```
+**Explaination:** 
+
+* outer loop will run till 4 times as there are 4 lines
+* inner loop will run till count and cout i count times
+* after every loop it will 
+
+
