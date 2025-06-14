@@ -141,6 +141,16 @@ void BackwardPatternRepeatedNumbers (int count) {
     }
 }
 
+int factorialNumber (int number) { //factorial of a given number
+    int factorialNumber = 1;
+    for (int i = 1; i <= number; i++)
+    {
+        factorialNumber *= i;
+    }
+    
+    cout << factorialNumber;
+}
+
 int main() {
     // countPattern(4);
     // triangleSquarePattern(5);
@@ -152,6 +162,7 @@ int main() {
     // pyrrmaidPatternTwo(3);
     // pyrammidContinuationNumber(4);
     // pyrammidPatternReverseNumber(4);
-    BackwardPatternRepeatedNumbers(4);
+    // BackwardPatternRepeatedNumbers(4);
+    factorialNumber(5);
     return 0;
 }
