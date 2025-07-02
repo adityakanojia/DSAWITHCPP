@@ -148,7 +148,21 @@ int factorialNumber (int number) { //factorial of a given number
         factorialNumber *= i;
     }
     
-    cout << factorialNumber;
+    return factorialNumber;
+}
+
+int sumOfNumber (int num) {
+    int digitSum = 0;
+
+    while (num > 0)
+    {
+        int remainder = num % 10;
+        num /= 10;
+        digitSum += remainder;
+    }
+
+    cout << digitSum;
+    
 }
 
 int main() {
@@ -163,6 +177,8 @@ int main() {
     // pyrammidContinuationNumber(4);
     // pyrammidPatternReverseNumber(4);
     // BackwardPatternRepeatedNumbers(4);
-    factorialNumber(5);
+    // factorialNumber(5);
+    // sumOfNumber(145);
+    // bionomialCoefficientOfR(2,2);
     return 0;
 }
