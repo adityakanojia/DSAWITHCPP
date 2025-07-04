@@ -16,6 +16,8 @@ Each element of an array takes up storage space depending on its data type:
 ```cpp
 int array[5] = {1, 2, 3, 4, 5}; // Array of length 5 with integer data type
 
+```
+
 ## Indexing in Arrays
 
 Arrays in C++ use **zero-based indexing**. This means the first element is at index `0`, the second at index `1`, and so on.
