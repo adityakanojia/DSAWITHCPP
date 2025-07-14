@@ -35,7 +35,7 @@ Bitwise operators perform operations directly on the **binary representation** o
 
 ### `<<` - Left Shift
 - Shifts bits to the left, inserting 0 from the right.
-- Equivalent to multiplying by 2ⁿ.
+- Suppose we want to left shift a with b times ie :- a << b. answer is always going to be a*2^b
 
 ### `>>` - Right Shift
 - Shifts bits to the right.
