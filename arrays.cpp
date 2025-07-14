@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
-    cout << "hello arrays";
+    int a=4,b=1;
+    cout << ( a >> b );
     return 0;
 }
