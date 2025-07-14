@@ -44,7 +44,7 @@ Bitwise operators perform operations directly on the **binary representation** o
 
 ---
 
-## 🧪 Example in Code (Python)
+## 🧪 Example in Code (c++)
 
 ```cpp
 a = 5  # 0101
