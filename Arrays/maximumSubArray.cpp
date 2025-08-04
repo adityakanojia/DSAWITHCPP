@@ -1,0 +1,69 @@
+#include<iostream>
+#include <climits>
+using namespace std;
+
+/*
+ the number of sub array that an array can have is (n*(n+1))/2 
+ 
+ let arr be a non-empty array [1,2,3,4,5] having length 5 therefore the number of array it can have is (5*(5+1))/2 = 15
+
+ let's check it
+
+ sub array1 = [1],[2],[3],[4],[5]
+ sub array2 = [1,2],[2,3],[3,4],[4,5]
+ sub array3 = [1,2,3],[2,3,4],[3,4,5]
+ sub array4 = [1,2,3,4],[2,3,4,5]
+ sub array5 = [1,2,3,4,5]
+
+ hence total number of sub arrays are equal to 15
+
+ we know that the every array is starting from its first index i.e :- 0
+ and if we know last index then we can easily slice the array 
+
+ starting index  end index
+ 0               0,1,2,3,4,5
+ 1               1,2,3,4,5
+ 2               2,3,4,5
+ 3               3,4,5
+ 4               4,5
+ 5               5
+*/
+
+void bruteForceSolution(int arr[],int count){
+    int maxSum = INT_MIN;
+    for (int st = 0; st < count; st++)
+    {
+        int currentSum = 0;
+        for (int end = st; end < count; end++)
+        {
+            currentSum += arr[end];
+            maxSum = max(currentSum,maxSum);
+        }
+        
+    }
+    cout << maxSum;
+}
+
+void optimizedSolution(int arr[],int count){
+    int currentSum = 0;
+    int maxSum = INT_MIN;
+    for (int i = 0; i < count; i++)
+    {
+        currentSum += arr[i];
+        maxSum = max(maxSum,currentSum);
+        if (currentSum < 0)
+        {
+            currentSum = 0;
+        }    
+    }
+    cout << maxSum;
+}
+
+int main(){
+    int arr[] = {-1,-2,-3,-4,-5};
+    int count = sizeof(arr)/sizeof(int);
+    bruteForceSolution(arr,count);
+    cout << endl;
+    optimizedSolution(arr,count);
+    return 0;
+}
