@@ -1,15 +1,12 @@
-#include<iostream>
-#include<vector>
+#include<iostream> 
+#include<vector> 
 using namespace std;
 
-/*
-Given a non-empty 2n (n = length(array)) array we have to find a pair of numbers which will give  maximum XOR ie:- 
-array = [1,2,3,4,5];
-possibe pairs :- [1,2],[1,3],[1,4],[1,5]    define two index i,j
-                 [2,3],[2,4],[2,5]          run both i,j to size(array)
-                 [3,4],[3.5]                cout possibe arr[i],arr[j]
-                 [4,5]
-*/
+/* Given a non-empty 2n (n = length(array)) array we have to find a pair of numbers which will give  maximum XOR ie:- array = [1,2,3,4,5]; 
+ * possibe pairs :- [1,2],[1,3],[1,4],[1,5]    
+ * define two index i,j [2,3],[2,4],[2,5]          
+ * run both i,j to size(array) [3,4],[3.5]                
+ * cout possibe arr[i],arr[j] [4,5] */ 
 
 int bruteForceSolution(vector<int>& nums){
     int maxXor = 0;
