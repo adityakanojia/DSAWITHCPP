@@ -51,7 +51,7 @@ int mostOptimizedSolution (vector<int>& nums) {
 
     for (int i = 0; i < nums.size(); i++)
     {
-        if(frequency = 0){
+        if(frequency == 0){
             answer = nums[i];
         }
         if(nums[i] == answer){
