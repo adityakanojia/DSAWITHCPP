@@ -53,6 +53,22 @@ int maximum_subarray_optimized(vector<int>& arr){
   return maximum_sum;
 }
 
+int majority_elements_bruteforce (vector<int>& arr) {
+  int counter = arr.size()/2;
+  for (int i=0; i<arr.size(); i++) {
+    int frequency = 0;
+    for (int j=i+1; j<arr.size(); j++) {
+      if(arr[i] == arr[j]){
+        frequency++
+      }
+      if(frequency >= counter){
+        return arr[i];
+      }
+    }
+  }
+  return -1;
+}
+
 int main() {
   cout << "Yo check this shit out" << endl;
   vector<int> arr = {-1,-2,-3,-4,-5};
