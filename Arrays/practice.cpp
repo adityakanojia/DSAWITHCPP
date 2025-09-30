@@ -59,7 +59,7 @@ int majority_elements_bruteforce (vector<int>& arr) {
     int frequency = 0;
     for (int j=i+1; j<arr.size(); j++) {
       if(arr[i] == arr[j]){
-        frequency++
+        frequency++;
       }
       if(frequency >= counter){
         return arr[i];
@@ -69,9 +69,37 @@ int majority_elements_bruteforce (vector<int>& arr) {
   return -1;
 }
 
+int container_with_most_water_brute(vector<int>& containers) 
+{
+  int largest_area = 0;
+  for (int i = 0; i< containers.size(); i++) {
+    for (int j = i+1; j < containers.size(); j++) {
+      int height = min(containers[j], containers[i]);
+      int width = j - i;
+      int area = height * width;
+      largest_area = max(largest_area, area);
+    }
+  }
+  return largest_area;
+}
+
+int container_with_most_water(vector<int>& containers)
+{
+ int largest_area = 0; 
+ int i = 0;
+ int j = containers.size() - 1;
+
+ while (i < j) {
+   int area = min(containers[i], containers[j])*(j - i);
+   largest_area = max(largest_area, area);
+   containers[i] > containers[j] ? j-- : i++;
+ }
+ return largest_area;
+}
+
 int main() {
   cout << "Yo check this shit out" << endl;
-  vector<int> arr = {-1,-2,-3,-4,-5};
-  cout << maximum_subarray_optimized(arr) << endl;
+  vector<int> arr = {1,8,6,2,5,4,8,3,7};
+  cout << container_with_most_water(arr) << endl;
   return 0;
 }
