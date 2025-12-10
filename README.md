@@ -1,9 +1,10 @@
 # DSA WITH C++ 
 
-This repo will go through every data structure and algorithm with c++ 
+Welcome to my journey of learning DSA not for topic views but for getting better in problem solving and what would be the better place of learning DSA other than **Algorithm design manual by Steven S. skienna**
 
-It is highly reccomended to go through apna college "DSA SERIES BY SHARADHA MA'AM" from which this repo is inspired i will try to complete
-
-every solution covered in the series and make good notes of them 
+> [!IMPORTANT]
+> each problem have many edge cases which are explained in the code itself so please refer to the comments of each code.
 
 ## feel free to make PR for any extra topic or solution
+
+
